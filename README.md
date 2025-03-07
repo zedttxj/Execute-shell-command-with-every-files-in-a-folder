@@ -1,4 +1,7 @@
 # Execute shell command with every files in a folder
+## Overview
+
+## Project Details
 - Developed a Python automation script to execute commands on files securely.
 - Ensured 100% accuracy with fail-secure, fail-safe, fail-open, and fail-closed mechanisms.
 - Replaced os.system() with subprocess.run() to prevent security risks.
