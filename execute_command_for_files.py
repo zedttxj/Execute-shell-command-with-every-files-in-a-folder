@@ -3,8 +3,8 @@ import os
 import subprocess
 import argparse
 import logging
+import shlex
 
-# Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def execute_command_for_files(folder_path, command, num_lines=None):
@@ -28,7 +28,7 @@ def execute_command_for_files(folder_path, command, num_lines=None):
                     logging.error(f"Error reading file {item_path}: {e}")
             else:
                 # Execute the command if not specified to show number of lines
-                full_command = [command, item_path]
+                full_command = shlex.split(command) + [item_path]
                 try:
                     result = subprocess.run(full_command, check=True, capture_output=True, text=True, errors="ignore")
                     logging.info(f"Executed: {' '.join(full_command)}\nOutput: {result.stdout[:100]}")  # Limit output length
