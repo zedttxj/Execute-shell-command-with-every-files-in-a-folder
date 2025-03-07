@@ -4,3 +4,4 @@
 - Replaced os.system() with subprocess.run() to prevent security risks.
 - Optimized for automation workflows, logging, and bulk file processing.
 - Tech Stack: Python, Shell Scripting, Linux, Automation
+- Prevented Python Module Hijacking
