@@ -1,6 +1,6 @@
 # Execute shell command with every files in a folder
 ## Overview
-The goal is to automate tasks on every files inside a folder recursively and build a networked system where a client queries a server for information based on names provided. Additionally, it only access to sub directories with appropriate permission.
+The goal is to automate tasks on every files inside a folder recursively and build an ssh tunnel where a client queries a server for information based on names provided. Additionally, it only access to sub directories with appropriate permission.
 ## Project Details
 - Develope a Python automation script to execute commands on files securely.
 - Ensured 100% accuracy with fail-secure, fail-safe, fail-open, and fail-closed mechanisms.
