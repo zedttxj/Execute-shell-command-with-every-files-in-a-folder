@@ -1,5 +1,8 @@
 import argparse
 import paramiko
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def execute_ssh_command(host, username, private_key_path, command, timeout=10):
     try:
@@ -52,7 +55,7 @@ def main():
     
     if files:
         for i in files:
-            print(execute_ssh_command(args.host, args.username, args.private_key, args.command + " " + i, timeout=args.timeout))
+            logging.info(f"File: {i} - Output: {''.join(execute_ssh_command(args.host, args.username, args.private_key, args.command + ' ' + i, timeout=args.timeout))}")
     else:
         print("No files found or an error occurred.")
 
